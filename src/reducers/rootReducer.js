@@ -38,8 +38,8 @@ function authorsReducer(state = [], action) {
             return [...state.slice(0, idx), ...state.slice(idx + 1)];
 
         case 'ADD_BOOK':
-            let existingAuthor = state.filter(suthor =>
-                suthor.aukthorName === action.book.authorName);
+            let existingAuthor = state.filter(author =>
+                author.authorName === action.book.authorName);
             
             if (existingAuthor.length > 0) {
                 return state;
